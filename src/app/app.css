@@ -1,0 +1,18 @@
+.riga1 > div
+{
+  background-color: aqua;
+  border: black 1px solid;
+}
+
+.riga2 div
+{
+  background-color: red;
+  border: black 1px solid;
+}
+
+.rigaInterna div
+{
+  background-color: green;
+  border: red 1px solid;
+}
+
