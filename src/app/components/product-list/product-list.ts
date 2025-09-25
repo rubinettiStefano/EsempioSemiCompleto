@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import {ProductGet} from '../../../model/ProductGet';
 import {HttpClient} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {SingoloProdottoFiglio} from '../singolo-prodotto-figlio/singolo-prodotto-figlio';
 
 @Component({
   selector: 'app-product-list',
   imports: [
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    SingoloProdottoFiglio
   ],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css'
