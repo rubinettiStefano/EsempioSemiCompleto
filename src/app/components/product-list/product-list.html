@@ -18,7 +18,7 @@
   @for (p of filtra();track $index)
   {
     <div class="col-4">
-      <app-singolo-prodotto-figlio [prod]="p" ></app-singolo-prodotto-figlio>
+      <app-singolo-prodotto-figlio (eventoCancellazioneFiglio)="cancelloMioFiglio($event)"   [prod]="p" ></app-singolo-prodotto-figlio>
     </div>
   }
 </div>
