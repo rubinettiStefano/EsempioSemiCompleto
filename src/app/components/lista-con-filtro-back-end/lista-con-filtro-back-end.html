@@ -1,0 +1,38 @@
+<div class="container">
+  <input [(ngModel)]="valorePrezzo"/>
+  <input [(ngModel)]="categoria"/>
+  <div class="form-check form-switch">
+    @if (!maggiore)
+    {
+      <label class="form-check-label" for="switchCheckDefault">Minore</label>
+    }
+    <input class="form-check-input" [(ngModel)]="maggiore" type="checkbox" role="switch" id="switchCheckDefault">
+    @if (maggiore)
+    {
+      <label class="form-check-label" for="switchCheckDefault">Maggiore</label>
+    }
+
+  </div>
+  <br/>
+  <button (click)="ottieniProdottiFiltrati()">FILTRA</button>
+  <button (click)="riempiConTutti()">RESET</button>
+  <div class="row row-gap-3">
+    @for (p of products;track $index)
+    {
+      <div class="col-4">
+        <div class="card" style="width: 18rem;">
+          <img [src]="p.imgUrl" height="250px" width="300px" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ p.name }}</h5>
+            <p class="card-text">
+              Category: {{p.category}}
+            </p>
+            <p class="card-text">
+              Price: {{p.price}} &euro;
+            </p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
