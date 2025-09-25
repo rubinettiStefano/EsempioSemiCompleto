@@ -1,0 +1,22 @@
+
+<div class="container">
+  <input [(ngModel)]="min"/>
+  <div class="form-check form-switch">
+    @if (!maggiore)
+    {
+      <label class="form-check-label" for="switchCheckDefault">Minore</label>
+    }
+    <input class="form-check-input" [(ngModel)]="maggiore" type="checkbox" role="switch" id="switchCheckDefault">
+    @if (maggiore)
+    {
+      <label class="form-check-label" for="switchCheckDefault">Maggiore</label>
+    }
+
+  </div>
+  <br/>
+  @for (n of  filtra();track $index)
+  {
+    <h1>{{n}}</h1>
+  }
+
+</div>
