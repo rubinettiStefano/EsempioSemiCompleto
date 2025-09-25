@@ -35,7 +35,7 @@ export class ListaConFiltroBackEnd
                   .append("v",this.valorePrezzo)
                   .append("sgn",this.maggiore);
 
-    return this.http.get<ProductGet[]>("/api/products",{params:queryParams})
+    this.http.get<ProductGet[]>("/api/products",{params:queryParams})
       .subscribe
       (
         (resp)=>this.products=resp

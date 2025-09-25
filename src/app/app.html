@@ -1,1 +1,28 @@
-<app-lista-con-filtro-back-end></app-lista-con-filtro-back-end>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Sito Bello</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="''">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="'prodotti'">Prodotti</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"[routerLink]="'array'">Array</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<router-outlet>
+  <!--
+
+    dentro mostra  ciò che è definito nelle routes
+  <app-homepage>
+  -->
+</router-outlet>
+<app-footer></app-footer>
